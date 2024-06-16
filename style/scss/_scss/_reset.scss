@@ -48,8 +48,11 @@ h1 {
     font-size: clamp(2rem, 20px + 10vw, 4.6rem);
     font-family: "Petrona", serif;
     font-weight: 500;
-    @include desktop {
+    @include tablet {
         font-size: clamp(4rem, 30px + 10vw, 6rem);
+    }
+    @include desktop {
+        font-size: clamp(6rem, 30px + 10vw, 7.4rem);
     }
 }
 
@@ -76,11 +79,18 @@ h4 {
 
 p {
     font-size: clamp(1.5rem, 10px + 5vw, 1.8rem);
+    @include tablet-desktop {
+        font-size: clamp(1.8rem, 10px + 5vw, 2rem);
+    }
 }
 
 .name {
     font-family: "Petrona", serif;
     font-size: clamp(1.5rem, 10px + 5vw, 2.6rem);
+    font-style: italic;
+    @include tablet-desktop {
+        font-size: clamp(1.5rem, 10px + 5vw, 4rem);
+    }
 }
 
 .italic {
@@ -105,6 +115,9 @@ a {
     color: $light;
     font-family: "Petrona", serif;
     font-size: clamp(1rem, 10px + 5vw, 1.8rem);
+    @include tablet-desktop {
+        font-size: clamp(1.8rem, 10px + 5vw, 2rem);
+    }
 }
 
 ul {
@@ -137,6 +150,8 @@ li {
 }
 
 .title-h2 {
+    max-width: 70rem;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;

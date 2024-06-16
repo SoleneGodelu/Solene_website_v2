@@ -47,9 +47,14 @@ h1 {
   font-family: "Petrona", serif;
   font-weight: 500;
 }
-@media (min-width: 1280px) {
+@media (min-width: 950px) and (max-width: 1279px) {
   h1 {
     font-size: clamp(4rem, 30px + 10vw, 6rem);
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-size: clamp(6rem, 30px + 10vw, 7.4rem);
   }
 }
 
@@ -77,10 +82,21 @@ h4 {
 p {
   font-size: clamp(1.5rem, 10px + 5vw, 1.8rem);
 }
+@media (min-width: 950px) {
+  p {
+    font-size: clamp(1.8rem, 10px + 5vw, 2rem);
+  }
+}
 
 .name {
   font-family: "Petrona", serif;
   font-size: clamp(1.5rem, 10px + 5vw, 2.6rem);
+  font-style: italic;
+}
+@media (min-width: 950px) {
+  .name {
+    font-size: clamp(1.5rem, 10px + 5vw, 4rem);
+  }
 }
 
 .italic {
@@ -105,6 +121,11 @@ a {
   color: #f2f2f2;
   font-family: "Petrona", serif;
   font-size: clamp(1rem, 10px + 5vw, 1.8rem);
+}
+@media (min-width: 950px) {
+  a {
+    font-size: clamp(1.8rem, 10px + 5vw, 2rem);
+  }
 }
 
 ul {
@@ -137,6 +158,8 @@ li {
 }
 
 .title-h2 {
+  max-width: 70rem;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -188,6 +211,18 @@ header {
   flex-direction: column;
   gap: 6rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  header {
+    padding: 0 4.8rem;
+    gap: 10rem;
+  }
+}
+@media (min-width: 950px) {
+  header {
+    padding: 2rem 10rem;
+    gap: 10rem;
+  }
+}
 header .nav {
   display: flex;
   justify-content: space-between;
@@ -200,12 +235,30 @@ header h1 {
 header h1 .italic {
   color: #417639;
 }
+@media (min-width: 1280px) {
+  header h1 {
+    max-width: 100rem;
+    align-self: center;
+  }
+}
 header p {
   text-align: center;
 }
-header a {
+@media (min-width: 1280px) {
+  header p {
+    max-width: 80rem;
+    align-self: center;
+  }
+}
+header .cta {
   text-align: center;
   font-size: clamp(1rem, 10px + 5vw, 2rem);
+  align-self: center;
+}
+@media (min-width: 1280px) {
+  header .cta {
+    font-size: clamp(1rem, 10px + 5vw, 2.4rem);
+  }
 }
 
 .numbers {
@@ -216,15 +269,51 @@ header a {
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .numbers {
+    padding: 10rem 4.8rem;
+    gap: 4rem;
+  }
+}
+@media (min-width: 950px) {
+  .numbers {
+    padding: 10rem;
+    gap: 5rem;
+  }
+}
 .numbers .container-numbers {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .numbers .container-numbers {
+    gap: 8rem;
+  }
+}
+@media (min-width: 950px) {
+  .numbers .container-numbers {
+    flex-direction: row;
+    align-self: center;
+    gap: 8rem;
+  }
+}
 .numbers .container-numbers .content-numbers {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
+@media (min-width: 500px) and (max-width: 949px) {
+  .numbers .container-numbers .content-numbers {
+    max-width: 40rem;
+    align-self: center;
+  }
+}
+@media (min-width: 950px) {
+  .numbers .container-numbers .content-numbers {
+    width: 100%;
+    max-width: 40rem;
+  }
 }
 .numbers .container-numbers .content-numbers .number {
   text-align: center;
@@ -236,16 +325,57 @@ header a {
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .about {
+    padding: 6.2rem 4.8rem;
+  }
+}
+@media (min-width: 950px) {
+  .about {
+    padding: 10rem;
+    gap: 4rem;
+  }
+}
 .about .container-about {
   display: flex;
   flex-direction: column;
   gap: 6rem;
+}
+@media (min-width: 950px) and (max-width: 1279px) {
+  .about .container-about {
+    max-width: 80rem;
+    align-self: center;
+  }
+}
+@media (min-width: 1280px) {
+  .about .container-about {
+    max-width: 120rem;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    gap: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about .container-about p {
+    line-height: 180%;
+  }
 }
 .about .container-about img {
   border-radius: 0.8rem;
   box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
   width: 30rem;
   margin: auto;
+}
+@media (min-width: 500px) and (max-width: 949px) {
+  .about .container-about img {
+    width: 40rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about .container-about img {
+    width: 40rem;
+  }
 }
 
 .skills {
@@ -254,33 +384,67 @@ header a {
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .skills {
+    padding: 6.2rem 4.8rem;
+  }
+}
+@media (min-width: 950px) {
+  .skills {
+    padding: 10rem;
+  }
+}
 .skills .stick-dark {
   margin-bottom: 10rem;
 }
 .skills .container-skills {
+  margin: auto;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   gap: 10rem;
 }
-.skills .container-skills .content-skills {
+@media (min-width: 1280px) {
+  .skills .container-skills {
+    max-width: none;
+  }
+}
+.skills .container-skills .double {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+@media (min-width: 1280px) {
+  .skills .container-skills .double {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+  }
+}
+.skills .container-skills .double .content-skills {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
-.skills .container-skills .content-skills .text-change {
-  color: #21221e;
-  font-size: clamp(2rem, 8px + 2vw, 8rem);
+@media (min-width: 1280px) {
+  .skills .container-skills .double .content-skills {
+    width: 100%;
+  }
 }
-.skills .container-skills .content-skills .stick-dark {
+.skills .container-skills .double .content-skills .text-change {
+  color: #21221e;
+  font-size: clamp(2rem, 4px + 1.5vw, 2.5rem);
+}
+.skills .container-skills .double .content-skills .stick-dark {
   margin: 0;
   width: 10rem;
 }
-.skills .container-skills .content-skills ul {
+.skills .container-skills .double .content-skills ul {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-.skills .container-skills .content-skills ul li {
+.skills .container-skills .double .content-skills ul li {
   display: flex;
   gap: 1rem;
   align-items: start;
@@ -292,10 +456,40 @@ header a {
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .package {
+    padding: 6.2rem 4.8rem;
+  }
+}
+@media (min-width: 950px) {
+  .package {
+    padding: 10rem;
+    gap: 4rem;
+  }
+}
 .package .container-package {
   display: flex;
   flex-direction: column;
   gap: 8rem;
+}
+@media (min-width: 500px) and (max-width: 949px) {
+  .package .container-package {
+    max-width: 60rem;
+    align-self: center;
+  }
+}
+@media (min-width: 950px) and (max-width: 1279px) {
+  .package .container-package {
+    max-width: 60rem;
+    align-self: center;
+  }
+}
+@media (min-width: 1280px) {
+  .package .container-package {
+    flex-direction: row;
+    align-self: center;
+    gap: 10rem;
+  }
 }
 .package .container-package .content-package-light {
   display: flex;
@@ -305,6 +499,11 @@ header a {
   border-radius: 0.8rem;
   box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
   padding: 8rem 4rem;
+}
+@media (min-width: 1280px) {
+  .package .container-package .content-package-light {
+    width: 50rem;
+  }
 }
 .package .container-package .content-package-light h3 {
   color: #21221e;
@@ -352,6 +551,11 @@ header a {
   background-color: #417639;
   color: #f2f2f2;
 }
+@media (min-width: 1280px) {
+  .package .container-package .content-package-dark {
+    width: 50rem;
+  }
+}
 .package .container-package .content-package-dark h3 {
   color: #f2f2f2;
 }
@@ -381,6 +585,16 @@ header a {
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .creation {
+    padding: 6.2rem 4.8rem;
+  }
+}
+@media (min-width: 950px) {
+  .creation {
+    padding: 10rem;
+  }
+}
 .creation .container-creation {
   display: flex;
   flex-direction: column;
@@ -394,6 +608,26 @@ header a {
 .creation .container-creation .content-creation img {
   border-radius: 0.8rem;
   box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
+}
+@media (min-width: 500px) and (max-width: 949px) {
+  .creation .container-creation .content-creation img {
+    align-self: center;
+    width: 100%;
+    max-width: 50rem;
+  }
+}
+@media (min-width: 950px) and (max-width: 1279px) {
+  .creation .container-creation .content-creation img {
+    align-self: center;
+    width: 100%;
+    max-width: 70rem;
+  }
+}
+@media (min-width: 1280px) {
+  .creation .container-creation .content-creation img {
+    max-width: 90rem;
+    align-self: center;
+  }
 }
 .creation .container-creation .text-change {
   font-size: clamp(1.4rem, 20px + 10vw, 2.4rem);
@@ -409,10 +643,27 @@ header a {
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .review {
+    padding: 6.2rem 4.8rem;
+  }
+}
+@media (min-width: 950px) {
+  .review {
+    padding: 10rem;
+    gap: 4rem;
+  }
+}
 .review .container-review {
   display: flex;
   flex-direction: column;
   gap: 8rem;
+}
+@media (min-width: 1280px) {
+  .review .container-review {
+    flex-direction: row;
+    gap: 4rem;
+  }
 }
 .review .container-review .content-review {
   padding: 4.8rem 2.4rem;
@@ -423,12 +674,39 @@ header a {
   border-radius: 0.8rem;
   box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
 }
+@media (min-width: 500px) and (max-width: 949px) {
+  .review .container-review .content-review {
+    max-width: 50rem;
+    align-self: center;
+  }
+}
+@media (min-width: 950px) and (max-width: 1279px) {
+  .review .container-review .content-review {
+    align-self: center;
+    max-width: 70rem;
+  }
+}
+@media (min-width: 1280px) {
+  .review .container-review .content-review {
+    width: 70rem;
+  }
+}
 
 .contact {
   padding: 6.2rem 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+@media (min-width: 500px) and (max-width: 949px) {
+  .contact {
+    padding: 6.2rem 4.8rem;
+  }
+}
+@media (min-width: 950px) {
+  .contact {
+    padding: 10rem;
+  }
 }
 .contact .container-contact {
   display: flex;
@@ -444,6 +722,20 @@ header a {
 }
 .contact .form {
   max-width: 50rem;
+}
+@media (min-width: 500px) and (max-width: 949px) {
+  .contact .form {
+    max-width: 60rem;
+    width: 100%;
+    align-self: center;
+  }
+}
+@media (min-width: 950px) {
+  .contact .form {
+    max-width: 80rem;
+    width: 100%;
+    align-self: center;
+  }
 }
 .contact .form div {
   display: flex;
@@ -469,7 +761,7 @@ header a {
 footer {
   background-color: #417639;
   color: #f2f2f2;
-  padding: 6.2rem 1.6rem;
+  padding: 8rem 1.6rem;
   display: flex;
   flex-direction: column;
   text-align: center;

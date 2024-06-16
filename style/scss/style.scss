@@ -10,6 +10,14 @@ header {
     display: flex;
     flex-direction: column;
     gap: 6rem;
+    @include tablet-portrait {
+        padding: 0 4.8rem;
+        gap: 10rem;
+    }
+    @include tablet-desktop {
+        padding: 2rem 10rem;
+        gap: 10rem;
+    }
     .nav {
         display: flex;
         justify-content: space-between;
@@ -21,13 +29,25 @@ header {
         .italic {
             color: $green;
         }
+        @include desktop {
+            max-width: 100rem;
+            align-self: center;
+        }
     }
     p {
         text-align: center;
+        @include desktop {
+            max-width: 80rem;
+            align-self: center;
+        }
     }
-    a {
+    .cta {
         text-align: center;
         font-size: clamp(1rem, 10px + 5vw, 2rem);
+        align-self: center;
+        @include desktop {
+            font-size: clamp(1rem, 10px + 5vw, 2.4rem);
+        }
     }
 }
 
@@ -38,14 +58,41 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-portrait {
+        padding: 10rem 4.8rem;
+        gap: 4rem;
+    }
+    @include tablet-desktop {
+        padding: 10rem;
+        gap: 5rem;
+    }
+
     .container-numbers {
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        @include tablet-portrait {
+            gap: 8rem;
+        }
+        @include tablet-desktop {
+            flex-direction: row;
+            align-self: center;
+            gap: 8rem;
+        }
+
         .content-numbers {
             display: flex;
             flex-direction: column;
             gap: 4rem;
+            @include tablet-portrait {
+                max-width: 40rem;
+                align-self: center;
+            }
+            @include tablet-desktop {
+                width: 100%;
+                max-width: 40rem;
+            }
+
             .number {
                 text-align: center;
             }
@@ -58,15 +105,45 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-portrait {
+        padding: 6.2rem 4.8rem;
+    }
+    @include tablet-desktop {
+        padding: 10rem;
+        gap: 4rem;
+    }
+
     .container-about {
         display: flex;
         flex-direction: column;
         gap: 6rem;
+        @include tablet {
+            max-width: 80rem;
+            align-self: center;
+        }
+        @include desktop {
+            max-width: 120rem;
+            flex-direction: row;
+            align-items: center;
+            align-self: center;
+            gap: 10rem;
+        }
+        p {
+            @include desktop {
+                line-height: 180%;
+            }
+        }
         img {
             border-radius: 0.8rem;
             box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
             width: 30rem;
             margin: auto;
+            @include tablet-portrait {
+                width: 40rem;
+            }
+            @include desktop {
+                width: 40rem;
+            }
         }
     }
 }
@@ -76,33 +153,59 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-portrait {
+        padding: 6.2rem 4.8rem;
+    }
+    @include tablet-desktop {
+        padding: 10rem;
+    }
+
     .stick-dark {
         margin-bottom: 10rem;
     }
     .container-skills {
+        margin: auto;
+        max-width: 50rem;
         display: flex;
         flex-direction: column;
         gap: 10rem;
-        .content-skills {
+        @include desktop {
+            max-width: none;
+        }
+
+        .double {
             display: flex;
             flex-direction: column;
-            gap: 4rem;
-            .text-change {
-                color: $dark;
-                font-size: clamp(2rem, 8px + 2vw, 8rem);
+            gap: 10rem;
+            @include desktop {
+                display: flex;
+                flex-direction: row;
+                gap: 8rem;
             }
-            .stick-dark {
-                margin: 0;
-                width: 10rem;
-            }
-            ul {
+            .content-skills {
                 display: flex;
                 flex-direction: column;
-                gap: 3rem;
-                li {
+                gap: 4rem;
+                @include desktop {
+                    width: 100%;
+                }
+                .text-change {
+                    color: $dark;
+                    font-size: clamp(2rem, 4px + 1.5vw, 2.5rem);
+                }
+                .stick-dark {
+                    margin: 0;
+                    width: 10rem;
+                }
+                ul {
                     display: flex;
-                    gap: 1rem;
-                    align-items: start;
+                    flex-direction: column;
+                    gap: 3rem;
+                    li {
+                        display: flex;
+                        gap: 1rem;
+                        align-items: start;
+                    }
                 }
             }
         }
@@ -114,10 +217,32 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-portrait {
+        padding: 6.2rem 4.8rem;
+    }
+    @include tablet-desktop {
+        padding: 10rem;
+        gap: 4rem;
+    }
+
     .container-package {
         display: flex;
         flex-direction: column;
         gap: 8rem;
+        @include tablet-portrait {
+            max-width: 60rem;
+            align-self: center;
+        }
+        @include tablet {
+            max-width: 60rem;
+            align-self: center;
+        }
+        @include desktop {
+            flex-direction: row;
+            align-self: center;
+            gap: 10rem;
+        }
+
         .content-package-light {
             display: flex;
             flex-direction: column;
@@ -126,6 +251,9 @@ header {
             border-radius: 0.8rem;
             box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
             padding: 8rem 4rem;
+            @include desktop {
+                width: 50rem;
+            }
             h3 {
                 color: $dark;
             }
@@ -173,6 +301,10 @@ header {
             padding: 8rem 4rem;
             background-color: $green;
             color: $light;
+            @include desktop {
+                width: 50rem;
+            }
+
             h3 {
                 color: $light;
             }
@@ -204,6 +336,13 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-portrait {
+        padding: 6.2rem 4.8rem;
+    }
+    @include tablet-desktop {
+        padding: 10rem;
+    }
+
     .container-creation {
         display: flex;
         flex-direction: column;
@@ -215,6 +354,20 @@ header {
             img {
                 border-radius: 0.8rem;
                 box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
+                @include tablet-portrait {
+                    align-self: center;
+                    width: 100%;
+                    max-width: 50rem;
+                }
+                @include tablet {
+                    align-self: center;
+                    width: 100%;
+                    max-width: 70rem;
+                }
+                @include desktop {
+                    max-width: 90rem;
+                    align-self: center;
+                }
             }
         }
         .text-change {
@@ -232,10 +385,22 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-portrait {
+        padding: 6.2rem 4.8rem;
+    }
+    @include tablet-desktop {
+        padding: 10rem;
+        gap: 4rem;
+    }
+
     .container-review {
         display: flex;
         flex-direction: column;
         gap: 8rem;
+        @include desktop {
+            flex-direction: row;
+            gap: 4rem;
+        }
         .content-review {
             padding: 4.8rem 2.4rem;
             display: flex;
@@ -244,6 +409,17 @@ header {
             border: 1px solid $green;
             border-radius: 0.8rem;
             box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
+            @include tablet-portrait {
+                max-width: 50rem;
+                align-self: center;
+            }
+            @include tablet {
+                align-self: center;
+                max-width: 70rem;
+            }
+            @include desktop {
+                width: 70rem;
+            }
         }
     }
 }
@@ -253,6 +429,13 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include tablet-portrait {
+        padding: 6.2rem 4.8rem;
+    }
+    @include tablet-desktop {
+        padding: 10rem;
+    }
+
     .container-contact {
         display: flex;
         flex-direction: column;
@@ -269,6 +452,16 @@ header {
     }
     .form {
         max-width: 50rem;
+        @include tablet-portrait {
+            max-width: 60rem;
+            width: 100%;
+            align-self: center;
+        }
+        @include tablet-desktop {
+            max-width: 80rem;
+            width: 100%;
+            align-self: center;
+        }
 
         div {
             display: flex;
@@ -298,7 +491,7 @@ header {
 footer {
     background-color: $green;
     color: $light;
-    padding: 6.2rem 1.6rem;
+    padding: 8rem 1.6rem;
     display: flex;
     flex-direction: column;
     text-align: center;

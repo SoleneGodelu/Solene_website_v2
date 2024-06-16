@@ -1,6 +1,5 @@
 //import
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap");
 @import "./variables";
 
 html {
@@ -9,34 +8,33 @@ html {
 
 body {
     overflow-x: hidden;
-    font-family: "Akshar", sans-serif;
-    color: $color-text;
-    background-color: $color-light;
+    font-family: "Open Sans", sans-serif;
+    color: $dark;
+    background-color: $light;
 
     ::selection {
-        background-color: $color-primary; /* Jaune, par exemple */
-        color: $color-text; /* Et le texte en noir */
+        background-color: $green;
+        color: $light;
     }
 
-    /* Pour Mozilla Firefox, utilisez */
     ::-moz-selection {
-        background-color: $color-primary; /* Jaune, par exemple */
-        color: $color-text; /* Et le texte en noir */
+        background-color: $green;
+        color: $light;
     }
 
     .scroll-top {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background-color: $color-primary;
-        color: $color-text;
+        background-color: $light;
+        color: $dark;
         text-align: center;
         height: 4.8rem;
         width: 4.8rem;
         padding: 0.8rem;
         border-radius: 12rem;
         cursor: pointer;
-        display: none; /* Cachez initialement la flèche */
+        display: none;
     }
 }
 
@@ -47,29 +45,51 @@ body {
 }
 
 h1 {
-    font-size: clamp(6rem, 20px + 10vw, 15rem);
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-weight: 800;
+    font-size: clamp(2rem, 20px + 10vw, 4.6rem);
+    font-family: "Petrona", serif;
+    font-weight: 500;
     @include desktop {
-        font-size: clamp(10rem, 30px + 10vw, 25rem);
+        font-size: clamp(4rem, 30px + 10vw, 6rem);
     }
 }
 
 h2 {
-    font-size: clamp(4rem, 20px + 3vw, 6rem);
-    font-weight: 600;
+    font-family: "Petrona", serif;
+    font-size: clamp(4rem, 10px + 3vw, 4.4rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 h3 {
-    font-size: clamp(3rem, 8px + 2vw, 6rem);
+    font-family: "Petrona", serif;
+    font-size: clamp(3.6rem, 8px + 2vw, 8rem);
+    font-weight: 500;
+    font-style: italic;
+    color: $green;
 }
 
 h4 {
+    font-family: "Petrona", serif;
     font-size: clamp(1.6rem, 10px + 5vw, 2rem);
 }
 
 p {
-    font-size: clamp(1.5rem, 10px + 5vw, 2rem);
+    font-size: clamp(1.5rem, 10px + 5vw, 1.8rem);
+}
+
+.name {
+    font-family: "Petrona", serif;
+    font-size: clamp(1.5rem, 10px + 5vw, 2.6rem);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.number {
+    font-family: "Petrona", serif;
+    font-size: clamp(4rem, 15px + 10vw, 6.2rem);
 }
 
 i {
@@ -78,13 +98,13 @@ i {
 
 a {
     text-decoration: none;
-    background: $color-text;
+    background: $green;
     padding: 1.2rem 2.4rem;
     border-radius: 0.8rem;
     cursor: pointer;
-    color: $color-light;
-    font-family: "Akshar", sans-serif;
-    font-size: clamp(1rem, 10px + 5vw, 1.75rem);
+    color: $light;
+    font-family: "Petrona", serif;
+    font-size: clamp(1rem, 10px + 5vw, 1.8rem);
 }
 
 ul {
@@ -95,14 +115,42 @@ li {
     font-size: clamp(1rem, 10px + 5vw, 1.75rem);
 }
 
+.stick-light {
+    background-color: $light;
+    height: 0.1rem;
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+.stick-dark {
+    background-color: $dark;
+    height: 0.1rem;
+    width: 25rem;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+.icon {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.title-h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.8rem;
+}
+
 button {
     border: none;
-    background: $color-text;
+    background: $green;
     padding: 1.2rem 2.4rem;
     border-radius: 0.8rem;
     cursor: pointer;
-    color: $color-light;
-    font-family: "Akshar", sans-serif;
+    color: $light;
+    font-family: "Petrona", serif;
     font-size: clamp(1rem, 10px + 5vw, 1.75rem);
 }
 

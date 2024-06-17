@@ -10,11 +10,11 @@ body {
   background-color: #f2f2f2;
 }
 body ::-moz-selection {
-  background-color: #417639;
+  background-color: #5f8858;
   color: #f2f2f2;
 }
 body ::selection {
-  background-color: #417639;
+  background-color: #5f8858;
   color: #f2f2f2;
 }
 body ::-moz-selection {
@@ -721,6 +721,9 @@ header .cta {
   font-family: "Open Sans", sans-serif;
 }
 .contact .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   max-width: 50rem;
 }
 @media (min-width: 500px) and (max-width: 949px) {
@@ -747,15 +750,22 @@ header .cta {
 }
 .contact .form div input,
 .contact .form div textarea {
+  border: 1px solid #417639;
   padding: 1.2rem 1.6rem;
   margin-bottom: 2rem;
-  border-radius: 0.6rem;
+  border-radius: 0.8rem;
   font-family: "Open Sans", sans-serif;
   font-size: clamp(1rem, 10px + 5vw, 1.75rem);
 }
 .contact .form button {
   font-weight: 500;
   width: 100%;
+}
+@media (min-width: 1280px) {
+  .contact .form button {
+    max-width: 40rem;
+    align-self: center;
+  }
 }
 
 footer {

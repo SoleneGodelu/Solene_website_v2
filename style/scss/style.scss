@@ -451,6 +451,9 @@ header {
         }
     }
     .form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
         max-width: 50rem;
         @include tablet-portrait {
             max-width: 60rem;
@@ -474,9 +477,11 @@ header {
 
             input,
             textarea {
+                border: 1px solid $green;
+
                 padding: 1.2rem 1.6rem;
                 margin-bottom: 2rem;
-                border-radius: 0.6rem;
+                border-radius: 0.8rem;
                 font-family: "Open Sans", sans-serif;
                 font-size: clamp(1rem, 10px + 5vw, 1.75rem);
             }
@@ -484,6 +489,10 @@ header {
         button {
             font-weight: 500;
             width: 100%;
+            @include desktop {
+                max-width: 40rem;
+                align-self: center;
+            }
         }
     }
 }

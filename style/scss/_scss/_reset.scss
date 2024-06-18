@@ -36,6 +36,7 @@ body {
         border-radius: 12rem;
         cursor: pointer;
         display: none;
+        box-shadow: none;
     }
 
     .scroll-top:hover {
@@ -116,13 +117,23 @@ a {
     background: $green;
     padding: 1.2rem 2.4rem;
     border-radius: 0.8rem;
+    border: 1px solid $green;
     cursor: pointer;
     color: $light;
     font-family: "Petrona", serif;
     font-size: clamp(1rem, 10px + 5vw, 1.8rem);
+    box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
+
     @include tablet-desktop {
         font-size: clamp(1.8rem, 10px + 5vw, 2rem);
     }
+}
+
+a:hover {
+    background: $light;
+    border: 1px solid $green;
+    color: $green;
+    box-shadow: 0px 0px 15px 10px rgba(65, 118, 56, 0.2);
 }
 
 ul {
@@ -171,7 +182,19 @@ button {
     cursor: pointer;
     color: $light;
     font-family: "Petrona", serif;
-    font-size: clamp(1rem, 10px + 5vw, 1.75rem);
+    font-size: clamp(1rem, 10px + 5vw, 1.8rem);
+    border: 1px solid $green;
+    box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
+    @include tablet-desktop {
+        font-size: clamp(1.8rem, 10px + 5vw, 2rem);
+    }
+}
+
+button:hover {
+    background: $light;
+    border: 1px solid $green;
+    color: $green;
+    box-shadow: 0px 0px 15px 10px rgba(65, 118, 56, 0.2);
 }
 
 input,

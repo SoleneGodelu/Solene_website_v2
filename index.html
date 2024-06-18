@@ -7,9 +7,22 @@
         <title>Document</title>
     </head>
     <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let title = document.querySelector(".name");
+                let text = title.textContent;
+                title.innerHTML = "";
+
+                for (let i = 0; i < text.length; i++) {
+                    let span = document.createElement("span");
+                    span.textContent = text[i];
+                    title.appendChild(span);
+                }
+            });
+        </script>
         <header>
             <div class="nav">
-                <p class="name">Solène Godelu</p>
+                <p class="name">Solène&nbsp;Godelu</p>
                 <a href="#">Rendez-vous</a>
             </div>
             <h1>
@@ -38,21 +51,21 @@
             <span class="stick-light"></span>
             <div class="container-numbers">
                 <div class="content-numbers">
-                    <p class="number">+ 25 %</p>
+                    <p class="number">+25 %</p>
                     <p>
                         D’augmentation des ventes des entreprises qui ont un
                         site internet professionnel.
                     </p>
                 </div>
                 <div class="content-numbers">
-                    <p class="number">+ 80 %</p>
+                    <p class="number">+80 %</p>
                     <p>
                         Des consommateurs font des recherches en ligne avant
                         d’acheter un produit ou un service.
                     </p>
                 </div>
                 <div class="content-numbers">
-                    <p class="number">+ 75 %</p>
+                    <p class="number">+75 %</p>
                     <p>
                         Des utilisateurs jugent la crédibilité d’une entreprise
                         en fonction de la conception de son site internet.
@@ -292,7 +305,7 @@
                     </p>
                 </div>
                 <div class="content-package-dark">
-                    <h3>À vous de choisir</h3>
+                    <h3>À toi de choisir</h3>
                     <span class="stick-light"></span>
                     <ul>
                         <li>
@@ -305,7 +318,7 @@
                             <img
                                 src="./pictures/Icon-arrow-light.svg"
                                 alt="Icon_arrow_light"
-                            />Animations lègères ou avancées
+                            />Animations légères ou avancées
                         </li>
                         <li>
                             <img
@@ -425,7 +438,7 @@
                     </p>
                 </div>
                 <div class="content-review">
-                    <h3>William</h3>
+                    <h3>Steven</h3>
                     <div>
                         <img
                             src="./pictures/Icon-star-green.svg"
@@ -446,13 +459,13 @@
                     </div>
                     <p>
                         J'ai travaillé avec Solène sur un projet où elle a pris
-                        en charge le design et le développement d'un site
-                        internet. Elle a été professionnelle et efficace je
+                        en charge le design et le développement de mon site
+                        internet. Elle a été professionnelle et efficace, je
                         recommande ses services.
                     </p>
                 </div>
                 <div class="content-review">
-                    <h3>Mohammed</h3>
+                    <h3>Aurélie</h3>
                     <div>
                         <img
                             src="./pictures/Icon-star-green.svg"
@@ -472,10 +485,11 @@
                         />
                     </div>
                     <p>
-                        Tincidunt enim orci felis sociis nisl ut amet non fusce.
-                        Porta dictum eu eget ipsum odio mauris dolor. Urna at
-                        eget ac sapien augue. Fermentum amet massa porttitor mi
-                        eu aliquet at. Pharetra diam nunc turpis non.
+                        Solène a réalisé le site pour mon élevage d'animaux et
+                        je suis très contente du résultat. Elle a très bien
+                        compris ce que je voulais et ses propositions ont été
+                        très justes. Je n'hésiterai pas à refaire appel à ses
+                        services.
                     </p>
                 </div>
             </div>
@@ -523,7 +537,7 @@
                         id="name"
                         type="text"
                         name="nom"
-                        placeholder="Solène Godelu"
+                        placeholder="John Doe"
                     />
                 </div>
                 <div>
@@ -532,7 +546,7 @@
                         id="email"
                         type="email"
                         name="mail"
-                        placeholder="solene.godelu@gmail.com"
+                        placeholder="john.doe@gmail.com"
                     />
                 </div>
                 <div>

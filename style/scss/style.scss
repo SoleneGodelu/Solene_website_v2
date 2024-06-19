@@ -503,10 +503,14 @@ header {
     @include tablet-desktop {
         padding: 10rem;
     }
-
+    p {
+        margin: 2rem 0 6rem 0;
+    }
     .container-contact {
         display: flex;
         flex-direction: column;
+        align-self: center;
+        gap: 4rem;
         .content-contact {
             a {
                 display: flex;
@@ -518,6 +522,13 @@ header {
                 border: none;
                 box-shadow: none;
             }
+            a:hover {
+                color: $green;
+            }
+        }
+        a {
+            max-width: 50rem;
+            text-align: center;
         }
     }
     .form {
@@ -571,17 +582,20 @@ footer {
     background-color: $green;
     color: $light;
     padding: 8rem 1.6rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-    a {
-        background: none;
-        padding: 0;
-    }
-    a:hover {
-        background: none;
-        color: $light;
+    div {
+        display: flex;
+
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        a {
+            background: none;
+            padding: 0;
+        }
+        a:hover {
+            background: none;
+            color: $light;
+        }
     }
 }
 

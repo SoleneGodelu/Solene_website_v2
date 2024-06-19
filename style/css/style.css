@@ -807,9 +807,14 @@ header .cta {
     padding: 10rem;
   }
 }
+.contact p {
+  margin: 2rem 0 6rem 0;
+}
 .contact .container-contact {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  gap: 4rem;
 }
 .contact .container-contact .content-contact a {
   display: flex;
@@ -820,6 +825,13 @@ header .cta {
   font-family: "Open Sans", sans-serif;
   border: none;
   box-shadow: none;
+}
+.contact .container-contact .content-contact a:hover {
+  color: #417639;
+}
+.contact .container-contact a {
+  max-width: 50rem;
+  text-align: center;
 }
 .contact .form {
   display: flex;
@@ -874,16 +886,18 @@ footer {
   background-color: #417639;
   color: #f2f2f2;
   padding: 8rem 1.6rem;
+}
+footer div {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 2rem;
 }
-footer a {
+footer div a {
   background: none;
   padding: 0;
 }
-footer a:hover {
+footer div a:hover {
   background: none;
   color: #f2f2f2;
 }

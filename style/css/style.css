@@ -128,6 +128,7 @@ a {
   font-family: "Petrona", serif;
   font-size: clamp(1rem, 10px + 5vw, 1.8rem);
   box-shadow: 4px 4px 4px 0px rgba(65, 118, 56, 0.2);
+  transition: 0.3s ease-in-out;
 }
 @media (min-width: 950px) {
   a {

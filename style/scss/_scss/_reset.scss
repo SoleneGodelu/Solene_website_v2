@@ -141,7 +141,10 @@ ul {
 }
 
 li {
-    font-size: clamp(1rem, 10px + 5vw, 1.75rem);
+    font-size: clamp(1.5rem, 10px + 5vw, 1.8rem);
+    @include tablet-desktop {
+        font-size: clamp(1.8rem, 10px + 5vw, 2rem);
+    }
 }
 
 .stick-light {

@@ -147,7 +147,12 @@ ul {
 }
 
 li {
-  font-size: clamp(1rem, 10px + 5vw, 1.75rem);
+  font-size: clamp(1.5rem, 10px + 5vw, 1.8rem);
+}
+@media (min-width: 950px) {
+  li {
+    font-size: clamp(1.8rem, 10px + 5vw, 2rem);
+  }
 }
 
 .stick-light {
@@ -881,4 +886,55 @@ footer a {
 footer a:hover {
   background: none;
   color: #f2f2f2;
+}
+
+.disclaimer {
+  padding: 6.2rem 1.6rem 10rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+@media (min-width: 500px) and (max-width: 949px) {
+  .disclaimer {
+    padding: 6.2rem 4.8rem 15rem 4.8rem;
+  }
+}
+@media (min-width: 950px) {
+  .disclaimer {
+    padding: 4rem 10rem 20rem 10rem;
+  }
+}
+.disclaimer h1 {
+  align-self: center;
+}
+.disclaimer .container-disclaimer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.disclaimer .container-disclaimer h3 {
+  font-size: clamp(2.4rem, 8px + 2vw, 4rem);
+}
+.disclaimer .container-disclaimer ul {
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.disclaimer .container-disclaimer p {
+  padding-left: 4rem;
+}
+
+.home {
+  background: none;
+  color: #21221e;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.home:hover {
+  box-shadow: none;
+  border: none;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */
